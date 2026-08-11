@@ -25,19 +25,19 @@ const pillars = [
     index: "01",
     title: "Growth investments",
     text: "We acquire and invest in lower-middle-market companies with strong fundamentals and room to run: typically $1M–$5M in EBITDA.",
-    href: "/services",
+    href: "/services/growth-investments",
   },
   {
     index: "02",
     title: "M&A advisory",
     text: "We advise owners through the full arc of a transaction, led by someone who has sat on the seller's side of the table personally.",
-    href: "/services",
+    href: "/services/ma-advisory",
   },
   {
     index: "03",
     title: "Off-market real estate",
     text: "Off-market commercial and residential opportunities, sourced through our network and evaluated alongside your tax and legal advisors.",
-    href: "/services",
+    href: "/services/off-market-real-estate",
   },
 ] as const;
 

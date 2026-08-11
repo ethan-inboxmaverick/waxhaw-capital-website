@@ -37,10 +37,31 @@ export const routes: readonly SiteRoute[] = [
   },
   {
     path: "/services",
-    title: "Services",
+    title: "Services — Investments, M&A Advisory, Real Estate",
     description:
-      "Growth investments, M&A advisory, and off-market real estate.",
-    status: "placeholder",
+      "Three disciplines, one operating mindset: growth investments in $1M–$5M EBITDA companies, sell-side and buy-side M&A advisory, and off-market real estate with tax-advantaged structures.",
+    status: "live",
+  },
+  {
+    path: "/services/growth-investments",
+    title: "Growth Investments — Majority Recapitalizations & Owner Rollover Equity",
+    description:
+      "Control acquisitions, majority recapitalizations with owner rollover, and second-bite structures for lower-middle-market companies with $1M–$5M EBITDA. Operator-led, no fund, no exit clock.",
+    status: "live",
+  },
+  {
+    path: "/services/ma-advisory",
+    title: "M&A Advisory — Sell-Side & Buy-Side for the Lower Middle Market",
+    description:
+      "Sell-side and buy-side M&A advisory: valuation, market process, structuring, negotiation, and post-close transition, led by an operator who has sold a company personally.",
+    status: "live",
+  },
+  {
+    path: "/services/off-market-real-estate",
+    title: "Off-Market Real Estate — 1031 Exchanges, Opportunity Zones, Cost Segregation",
+    description:
+      "Off-market commercial and residential real estate sourcing with tax-advantaged structures, evaluated alongside your tax and legal advisors.",
+    status: "live",
   },
   {
     path: "/team",
