@@ -1,0 +1,65 @@
+/*
+ * Waxhaw Capital Group — design tokens (single source of truth).
+ * Every text/background pairing used on the site is contrast-verified;
+ * see brand/colors.md for the computed WCAG table. Do not add raw hex
+ * values in components; consume these tokens through the Tailwind theme.
+ */
+:root {
+  /* surfaces */
+  --ink: #07090e;        /* page background */
+  --ink-2: #0b0f17;      /* raised dark surface */
+  --ink-3: #111726;      /* subtle dark surface */
+  --paper: #f2eee5;      /* warm light surface */
+  --paper-2: #eae4d6;    /* light surface, hover */
+
+  /* accent */
+  --gold: #e0a040;       /* brand accent on dark */
+  --gold-soft: #f0d9ae;  /* accent hover on dark */
+  --gold-deep: #8a5a10;  /* accent for text on light surfaces (AA) */
+
+  /* text on dark */
+  --tx: #e9ecf2;
+  --tx-dim: #a6adba;
+  --tx-faint: #7e8694;
+
+  /* text on light */
+  --ink-tx: #191f2d;
+  --ink-tx-dim: #4c5568;
+
+  /* lines */
+  --line: rgba(240, 225, 195, 0.13);
+  --line-strong: rgba(240, 225, 195, 0.25);
+  --line-dark: rgba(11, 15, 23, 0.15);
+
+  /* type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-label: "Space Grotesk", "SF Mono", monospace;
+
+  /* layout */
+  --header-h: 72px;
+  --content-max: 1440px;
+  --pad: clamp(20px, 4vw, 64px);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  --color-tx: var(--tx);
+  --color-tx-dim: var(--tx-dim);
+  --color-tx-faint: var(--tx-faint);
+  --color-ink-tx: var(--ink-tx);
+  --color-ink-tx-dim: var(--ink-tx-dim);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-dark: var(--line-dark);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-label: var(--font-label);
+}
