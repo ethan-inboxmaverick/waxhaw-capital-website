@@ -1,10 +1,10 @@
 /**
  * Canonical route inventory. Feeds the sitemap, llms.txt, and navigation.
  * status: "live" routes are indexable and appear in the sitemap;
- * "placeholder" routes exist so navigation works during the incremental
- * build, render an honest in-progress notice, and are noindexed.
+ * "noindex" routes exist and render but are excluded from the sitemap and
+ * carry a robots noindex (drafts pending counsel or founder content).
  */
-export type RouteStatus = "live" | "placeholder";
+export type RouteStatus = "live" | "noindex";
 
 export interface SiteRoute {
   path: string;
@@ -22,18 +22,18 @@ export const routes: readonly SiteRoute[] = [
     status: "live",
   },
   {
+    path: "/about",
+    title: "About the Firm — Operators First, Investors Second",
+    description:
+      "Waxhaw Capital Group was founded by two operators who have built, scaled, and sold companies of their own. $1M–$5M EBITDA, essential businesses, family office mindset.",
+    status: "live",
+  },
+  {
     path: "/criteria",
     title: "Investment Criteria — $1M–$5M EBITDA",
     description:
       "What Waxhaw Capital Group looks for: $1M to $5M EBITDA, essential businesses in home services, B2B services, healthcare, veterinary, manufacturing, and distribution. Southeast primary. No fund, no exit clock.",
     status: "live",
-  },
-  {
-    path: "/about",
-    title: "About the Firm",
-    description:
-      "An operator-led investment firm founded by two operators who have built, scaled, and sold companies of their own.",
-    status: "placeholder",
   },
   {
     path: "/services",
@@ -65,29 +65,59 @@ export const routes: readonly SiteRoute[] = [
   },
   {
     path: "/team",
-    title: "Leadership",
-    description: "The founders of Waxhaw Capital Group.",
-    status: "placeholder",
+    title: "Leadership — The Founders",
+    description:
+      "Meet the founders of Waxhaw Capital Group: David Dygowski and Aaron Caddel, operators who have built, scaled, and sold companies of their own.",
+    status: "live",
+  },
+  {
+    path: "/team/david-dygowski",
+    title: "David Dygowski — Managing Partner, Operator & Investor",
+    description:
+      "Founder of Crawl Space Brothers through its sale, operator of Touchstone Electric, Hold the Line Fencing, and Solid Ground, and a North Carolina native rooted in Waxhaw.",
+    status: "live",
+  },
+  {
+    path: "/team/aaron-caddel",
+    title: "Aaron Caddel — Managing Partner, Entrepreneur & Real Estate Investor",
+    description:
+      "Founder, operator, and seller of three companies across the blue-collar trades and hospitality; leads WCG's off-market real estate sourcing across the Carolinas.",
+    status: "live",
   },
   {
     path: "/process",
-    title: "Our Process",
+    title: "Our Process — What Happens When You Sell Your Business",
     description:
-      "What happens after you contact us, step by step.",
-    status: "placeholder",
+      "What actually happens after you contact us, step by step: first conversation, NDA, information request, indication of value, diligence, close, and what life looks like after.",
+    status: "live",
   },
   {
     path: "/contact",
-    title: "Contact",
+    title: "Contact — Start a Confidential Conversation",
     description:
-      "Start a confidential conversation or submit an opportunity.",
-    status: "placeholder",
+      "Three ways in: a confidential owner conversation, a structured opportunity submission for intermediaries, or a partnership inquiry. NDA before you share anything sensitive.",
+    status: "live",
   },
   {
     path: "/disclosures",
     title: "Disclosures",
-    description: "Legal, regulatory, and disclaimer content.",
-    status: "placeholder",
+    description:
+      "Legal and regulatory disclosures for Waxhaw Capital Group, including the firm's advisor-and-principal disclosure.",
+    status: "live",
+  },
+  {
+    path: "/privacy",
+    title: "Privacy Policy",
+    description:
+      "How this website handles information: what is and isn't collected, and what happens when you contact us.",
+    status: "noindex",
+  },
+  {
+    path: "/insights",
+    title: "Insights — Selling, Structuring & Growing Lower-Middle-Market Businesses",
+    description:
+      "Articles written from the founders' operating experience on exits, structures, valuations, and real estate. First pieces in progress.",
+    status: "noindex",
   },
 ] as const;
 

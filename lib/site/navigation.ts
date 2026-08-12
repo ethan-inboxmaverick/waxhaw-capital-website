@@ -22,8 +22,10 @@ export const footerNav: readonly { label: string; href: string }[] = [
   { label: "Services", href: "/services" },
   { label: "Team", href: "/team" },
   { label: "Process", href: "/process" },
+  { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
   { label: "Disclosures", href: "/disclosures" },
+  { label: "Privacy", href: "/privacy" },
 ] as const;
 
 export const headerCta = { label: "Start a conversation", href: "/contact" } as const;

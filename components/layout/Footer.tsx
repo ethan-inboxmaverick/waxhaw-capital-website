@@ -29,7 +29,7 @@ export function Footer() {
         </div>
         <p className="max-w-[86ch] border-t border-line py-6 text-[0.78rem] leading-7 text-tx-faint">
           {siteConfig.disclosure}{" "}
-          <Link href="/disclosures" className="text-gold underline-offset-4 hover:underline">
+          <Link href="/disclosures" className="text-gold underline underline-offset-4 hover:text-gold-soft">
             Read our full disclosures.
           </Link>
         </p>
