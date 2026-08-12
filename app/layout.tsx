@@ -1,4 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import "@fontsource-variable/fraunces/standard.css";
+import "@fontsource-variable/fraunces/standard-italic.css";
+import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/space-grotesk/index.css";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -21,16 +25,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" id="top">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Font loading via stylesheet link keeps builds hermetic in
-            offline environments; swap to self-hosted files before launch. */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+      {/* Fonts are self-hosted via @fontsource-variable packages (imported
+          above): no third-party requests, font-display: swap. */}
       <body className="flex min-h-svh flex-col">
         <a
           href="#main"
